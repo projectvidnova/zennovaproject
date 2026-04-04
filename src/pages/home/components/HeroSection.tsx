@@ -190,8 +190,9 @@ export default function HeroSection() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-1">
               <a
-                href="#early-access"
+                href="#contact"
                 className="whitespace-nowrap relative overflow-hidden bg-[#2563EB] text-white px-7 py-3.5 rounded-xl text-sm font-semibold font-inter cursor-pointer hover:bg-[#1d4ed8] transition-all duration-200 group shadow-[0_4px_20px_rgba(37,99,235,0.3)]"
+                onClick={() => window.dispatchEvent(new CustomEvent('switch-form-tab', { detail: 'access' }))}
               >
                 <span className="relative z-10">Get Early Access</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />

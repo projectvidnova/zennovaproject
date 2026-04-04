@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 
 const ROLES = ['Project Developer', 'EPC Contractor', 'Liaison Engineer', 'Consultant', 'Other'];
 
@@ -6,6 +6,15 @@ export default function ClosingCTA() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<'access' | 'demo'>('demo');
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const tab = (e as CustomEvent).detail;
+      if (tab === 'access' || tab === 'demo') setActiveTab(tab);
+    };
+    window.addEventListener('switch-form-tab', handler);
+    return () => window.removeEventListener('switch-form-tab', handler);
+  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
