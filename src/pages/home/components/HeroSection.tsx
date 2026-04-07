@@ -232,16 +232,6 @@ export default function HeroSection() {
             <ProductSuiteInfographic />
           </div>
         </div>
-
-        {/* Trusted by strip */}
-        <div className={`mt-20 pt-8 border-t border-gray-100 transition-all duration-700 delay-400 ${visible ? 'opacity-100' : 'opacity-0'}`}>
-          <p className="text-xs text-gray-400 font-inter text-center mb-6 uppercase tracking-widest">Trusted by teams at</p>
-          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-14">
-            {['NTPC Solar', 'Torrent Power', 'ReNew Energy', 'SB Energy', 'Adani Green', 'Greenko'].map((co) => (
-              <span key={co} className="text-sm font-semibold text-gray-300 font-outfit hover:text-gray-500 transition-colors cursor-default">{co}</span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

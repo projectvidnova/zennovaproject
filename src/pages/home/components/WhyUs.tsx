@@ -1,21 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 
 const OLD_WAY = [
-  'Manual data entry for every Discom',
-  'Rejected applications with 4-week delays',
-  'Expired KYC slips through unnoticed',
-  'Spreadsheets to track 20+ doc types',
-  'Liaison engineers waste hours on templates',
-  'No visibility into submission readiness',
+  'Manual data entry for every state and Discom.',
+  'Rejected applications due to 4-week delay in finding errors.',
+  'Expired ITRs or Bank Statements slip through unnoticed.',
+  'Manual sorting of KYC, Finance, and Liaison folders.',
+  'Liaison engineers waste 60% of their day on templates.',
+  'Zero visibility into submission readiness.',
 ];
 
 const ZENNOVA_WAY = [
-  'AI-generated, Discom-specific forms instantly',
-  'Validated submissions—first time, every time',
-  'Automated expiry alerts before issues arise',
-  'Single dashboard for all project documents',
-  'Engineers focus on execution, not paperwork',
-  'Real-time submission readiness score',
+  'AI-Generated, state-specific forms (NSS, WCR, JIR) instantly.',
+  'Real-time Validation: Name matches, PDF checks, and geo-tags.',
+  'Automated audit of Assessment Years and 6-month bank periods.',
+  'AI Extraction: Auto-categorizes TFR Acks and JS Approval letters.',
+  'Engineers focus on execution, not paperwork.',
+  'Real-time readiness score based on document completeness.',
 ];
 
 export default function WhyUs() {
