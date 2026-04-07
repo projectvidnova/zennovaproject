@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import ProductSuiteInfographic from './ProductSuiteInfographic';
 
 const DOC_LABELS = ['Technical Feasibility', 'KYC Package', 'SLD Drawing', 'Load Sanction', 'Metering Schema', 'NOC Certificate'];
 
@@ -151,7 +152,7 @@ export default function HeroSection() {
       <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-[#10B981]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-center">
 
           {/* Left: Text */}
           <div
@@ -224,11 +225,11 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right: Pipeline Card */}
+          {/* Right: Product Suite Infographic */}
           <div
             className={`flex items-center justify-center transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
-            <PipelineCard />
+            <ProductSuiteInfographic />
           </div>
         </div>
 
