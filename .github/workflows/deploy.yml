@@ -32,7 +32,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          BASE_PATH: /zennovaproject/
+          BASE_PATH: /
       - name: Copy index.html to 404.html for SPA routing
         run: cp out/index.html out/404.html
       - name: Setup Pages
